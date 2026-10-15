@@ -1,0 +1,936 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Fixit project analysis: Eldeco 7 Peaks go-to-market plan, budget and very conservative forecast for the promoter.">
+<title>7 Peaks Growth Plan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&family=JetBrains+Mono:wght@500;600&display=swap">
+<style>
+
+/* Layout: Fixit look — white page, near-black chrome (logo, tabs, buttons, banners); colour lives on boxes and charts using the Estate 361 site palette: green = family / strength, amber = Antara, red = problem, blue = Max. Serif headlines, Inter body. */
+:root{
+  color-scheme:light;
+  --bg:#FFFFFF; --surface:#FFFFFF; --surface-2:#F8F6F0; --line:#ECEAE4; --track:#ECE9E1;
+  --ink:#18181B; --ink-2:#3F3F46; --muted:#5F6368; --head:#18181B;
+  --brand:#18181B; --brand-strong:#18181B; --brand-soft:#F4F4F5; --cyan:#9A6B12;
+  --navy:#18181B; --navy-2:#27272A; --on-navy:#FFFFFF; --on-navy-2:#A1A1AA;
+  --hero:#18181B;
+  --forest:#18181B; --on-forest:#FFFFFF; --on-forest-2:#A1A1AA;
+  --family:#0F8A64; --family-soft:#E4F2EC; --senior:#B8730A; --senior-soft:#F7ECDA;
+  --good:#0F8A64; --good-soft:#E4F2EC; --bad:#D64545; --bad-soft:#FBE5E5;
+  --blue:#2563EB; --blue-soft:#EBF1FE;
+  --max:#2563EB; --broker:#D64545; --other:#CDC9BF; --grey:#A8A49B; --tab-on:#18181B;
+  --hatch:#D64545;
+  --p1:#0F8A64; --p2:#18181B; --p3:#B8730A; --p4:#2563EB; --p5:#7C3AED; --p6:#8A6440;
+  --display:'Playfair Display',Georgia,'Times New Roman',serif;
+  --body:'Inter',-apple-system,'Segoe UI',Roboto,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+  --r:14px;
+}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:0 56px}
+h1,h2,h3{font-family:var(--display);color:var(--head);font-weight:600;letter-spacing:-.01em;text-wrap:balance;margin:0}
+p{margin:0}
+.mono{font-family:var(--mono);font-variant-numeric:tabular-nums}
+.lbl{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--max);outline-offset:2px;border-radius:6px}
+
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:16px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px}
+.brand .logo{width:32px;height:32px;border-radius:8px;background:var(--navy);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+.brand .logo svg{width:18px;height:18px;fill:none;stroke:#fff;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.brand b{font-family:var(--body);font-size:21px;font-weight:800;letter-spacing:-.02em;color:var(--head)}
+.brand span{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);padding-left:10px;border-left:1px solid var(--line)}
+.top .meta{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:right}
+
+/* landing */
+.land{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:40px;padding-block:56px 24px;align-items:start}
+.land h1{font-size:clamp(34px,5vw,54px);line-height:1.05}
+.land .lede{font-size:17px;color:var(--ink-2);margin-top:16px;max-width:52ch}
+.gets{margin-top:28px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 18px}
+.gets div{display:flex;gap:10px;align-items:baseline;font-size:14px;color:var(--ink-2);padding-block:6px;border-top:1px solid var(--line)}
+.gets b{font-family:var(--mono);font-size:11px;color:var(--muted);font-weight:600;min-width:20px}
+.proj{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 1px 2px rgba(20,30,25,.05)}
+.cover{border-radius:12px;background:var(--hero);color:var(--on-forest);padding:24px 22px;position:relative;overflow:hidden}
+.cover .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--on-forest-2)}
+.cover .n{font-family:var(--display);font-size:40px;font-weight:600;letter-spacing:-.01em;line-height:1;margin-top:14px}
+.cover .d{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;margin-top:12px;color:var(--on-forest-2)}
+.cover svg{position:absolute;right:-20px;bottom:-30px;opacity:.16}
+.pmeta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:16px}
+.pmeta div{background:var(--surface-2);border-radius:10px;padding:10px 12px}
+.pmeta b{display:block;font-family:var(--display);font-size:20px;font-weight:600;color:var(--head)}
+.pmeta span{font-size:12px;color:var(--muted)}
+.srcs{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.srcs span{font-size:11.5px;padding:4px 9px;border-radius:999px;border:1px solid var(--line);color:var(--ink-2)}
+.go{margin-top:20px;width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px 18px;border:0;border-radius:12px;background:var(--brand-strong);color:#fff;font-size:16px;font-weight:600;transition:transform .15s ease,filter .15s ease}
+.go:hover{filter:brightness(1.12)} .go:active{transform:translateY(1px)}
+.go[disabled]{opacity:.7;cursor:progress}
+.steps{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:8px}
+.steps li{display:flex;align-items:center;gap:12px;font-size:14px;color:var(--muted)}
+.steps .dot{width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;border:1.5px solid var(--line);flex:0 0 22px}
+.steps li.run{color:var(--ink)} .steps li.run .dot{border-color:var(--brand);border-top-color:transparent;animation:spin .8s linear infinite}
+.steps li.done{color:var(--ink)} .steps li.done .dot{background:var(--brand-strong);border-color:var(--brand-strong);color:#fff}
+@keyframes spin{to{transform:rotate(360deg)}}
+.note-sm{font-size:12px;color:var(--muted);margin-top:12px}
+
+/* dashboard header + tabs */
+.dhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:14px;padding-block:28px 18px}
+.dhead h1{font-size:clamp(28px,4vw,40px)}
+.dhead .sub{font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.ghost{background:transparent;border:1px solid var(--line);color:var(--ink-2);border-radius:999px;padding:8px 14px;font-size:13px}
+.ghost:hover{border-color:var(--muted)}
+.tabs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-inline:-20px;padding-inline:20px}
+.tabs .row{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;padding-block:8px}
+.tabs .row::-webkit-scrollbar{display:none}
+.tab{flex:0 0 auto;border:0;background:transparent;color:var(--muted);padding:9px 14px;border-radius:999px;font-size:14px;font-weight:500;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.tab .n{font-family:var(--mono);font-size:11px;opacity:.75}
+.tab:hover{color:var(--ink);background:var(--surface-2)}
+.tab[aria-selected="true"]{background:var(--tab-on);color:#fff}
+.panel{padding-block:28px 0;display:grid;gap:22px}
+.sec{display:grid;gap:14px}
+.sec > h2{font-size:clamp(24px,3.2vw,34px);line-height:1.1}
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:4px 9px;border-radius:5px;background:var(--navy);color:var(--on-navy);width:max-content}
+.tag.bad{background:var(--bad);color:#fff} .tag.c{background:#9A6B12;color:#fff} .tag.d{background:var(--blue);color:#fff}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:20px;min-width:0}
+.card h3{font-family:var(--body);font-size:15.5px;font-weight:600;color:var(--ink)}
+.card .cap{font-size:12.5px;color:var(--muted);margin-top:2px}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.g3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.g4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.g5{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.src{font-size:11.5px;color:var(--muted);line-height:1.45;border-top:1px solid var(--line);padding-top:12px}
+
+/* tiles */
+.tile{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px;min-width:0}
+.tile .v{font-family:var(--display);font-size:clamp(26px,3vw,36px);font-weight:600;letter-spacing:-.01em;line-height:1;color:var(--head)}
+.tile .v small{font-size:.5em;color:var(--muted);font-family:var(--body);font-weight:500;margin-left:3px}
+.tile p{font-size:13px;color:var(--ink-2);margin-top:8px}
+.tile.bad{border-top:3px solid var(--bad);background:linear-gradient(180deg,#FFF7F7,#FFFFFF 60%)}
+.tile.ok{background:var(--good-soft);border-color:#CDE6DA}
+.tile.ok .v{color:var(--good)}
+.problem{background:var(--bad-soft);border:1px solid #F3CFCF;border-left:6px solid var(--bad);border-radius:0 18px 18px 0;padding:26px 28px}
+.problem .lbl{color:var(--bad);font-weight:600}
+.problem h2{font-size:clamp(28px,4.4vw,48px);line-height:1.06;letter-spacing:-.01em;margin-top:10px}
+.problem p{font-size:17px;color:var(--ink-2);margin-top:12px;max-width:70ch}
+.problem p b{color:var(--ink)}
+.banner{background:var(--hero);color:var(--on-forest);border-radius:var(--r);padding:20px 24px;display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px}
+.banner .big{font-family:var(--display);font-size:clamp(30px,4vw,44px);font-weight:600;letter-spacing:-.01em;line-height:1}
+.banner p{font-size:15px;color:var(--on-forest-2);max-width:62ch}
+.banner p b{color:var(--on-forest)}
+.strip{background:var(--blue-soft);color:#1E3A8A;border:1px solid #D3E0FC;border-radius:12px;padding:14px 18px;font-size:14.5px}
+.strip b{color:#1E40AF}
+.call{border-radius:12px;padding:14px 18px;font-size:14.5px}
+.call.bad{background:var(--bad-soft)} .call.bad b{color:var(--bad)}
+.call.ok{background:var(--good-soft)} .call.ok b{color:var(--good)}
+
+/* summary cards to tabs */
+.jump{display:flex;flex-direction:column;gap:8px;text-align:left;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--jc,var(--ink));border-radius:var(--r);padding:16px 18px;color:var(--ink);min-width:0;transition:border-color .15s ease,transform .15s ease}
+.jump:hover{border-color:var(--muted);transform:translateY(-1px)}
+.jump .t{font-weight:600;font-size:15px;display:flex;justify-content:space-between;gap:8px}
+.jump .t span{color:var(--muted);font-family:var(--mono);font-size:11px}
+.jump p{font-size:13.5px;color:var(--ink-2)}
+
+/* bars */
+.bars{display:grid;gap:9px;margin-top:12px}
+.br{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr) 54px;gap:12px;align-items:center;font-size:13.5px}
+.br .tr{height:10px;background:var(--track);border-radius:6px;position:relative;overflow:hidden}
+.br .tr i{position:absolute;left:0;top:0;bottom:0;border-radius:6px;background:var(--grey)}
+.br .val{font-family:var(--mono);font-weight:600;text-align:right;font-size:13px}
+.br.s .tr i{background:var(--good)} .br.w .tr i{background:var(--bad)}
+.br.me span:first-child{font-weight:600}
+.br.me .tr i{background:var(--max)}
+.br.zero .tr{background:transparent;border:1.5px dashed var(--bad)}
+.br.zero .val{color:var(--bad)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--ink-2);margin-top:10px}
+.legend span{display:inline-flex;align-items:center;gap:7px}
+.legend i{width:10px;height:10px;border-radius:3px;display:inline-block}
+
+/* gauges */
+.gauge{display:flex;flex-direction:column;align-items:center;gap:2px;min-width:0}
+.gauge svg{width:100%;max-width:150px;height:auto}
+.gauge .gl{font-size:12.5px;color:var(--muted)}
+.gauge text{font-family:var(--body)}
+.score-wrap{display:grid;grid-template-columns:170px minmax(0,1fr);gap:20px;align-items:center}
+
+/* waffle */
+.waffle{display:grid;grid-template-columns:repeat(6,1fr);gap:7px;max-width:270px;margin-top:14px}
+.waffle i{aspect-ratio:1/1;border-radius:6px;display:block;max-width:100%}
+
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.chip{border:1px solid var(--line);border-radius:999px;padding:8px 14px;font-family:var(--mono);font-size:13.5px;font-weight:600;background:var(--surface)}
+.chip small{display:block;font-family:var(--body);font-weight:400;font-size:11px;color:var(--muted)}
+.chip.warn{background:var(--bad-soft);border-color:var(--bad);color:var(--bad)}
+.chip.no{font-family:var(--body);font-weight:500;font-size:13px;background:var(--bad-soft);border-color:transparent;color:var(--bad);padding:6px 12px}
+.chip.no::before{content:'✕ ';font-weight:700}
+
+/* columns chart */
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;align-items:end;height:200px;margin-top:16px}
+.col{display:flex;flex-direction:column;justify-content:flex-end;align-items:stretch;height:100%;text-align:center}
+.col .bar{background:var(--family);border-radius:6px 6px 0 0;opacity:.6}
+.col.first .bar{opacity:1}
+.col .num{font-family:var(--mono);font-weight:600;font-size:13px;margin-bottom:6px}
+.col .x{font-size:12px;color:var(--muted);margin-top:6px}
+.stack{display:flex;height:42px;border-radius:8px;overflow:hidden;gap:2px;margin-top:12px}
+.stack div{display:flex;align-items:center;padding-inline:12px;font-weight:600;font-size:13.5px;white-space:nowrap;overflow:hidden}
+.stack .a{background:var(--max);color:#fff}
+.stack .b{background:var(--bad-soft);color:var(--bad)}
+
+/* competitors */
+.comp{display:flex;flex-direction:column;gap:8px}
+.comp .who{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.comp .who b{font-size:14px}
+.comp .who span{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);text-align:right}
+.comp h4{margin:0;font-family:var(--display);font-size:20px;font-weight:600;color:var(--head);line-height:1.15}
+.comp .pf{font-family:var(--mono);font-size:13.5px;font-weight:600;line-height:1.45}
+.comp .pf small{display:block;font-family:var(--body);font-weight:400;font-size:11px;color:var(--muted)}
+.comp .gap{margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-size:13.5px}
+.comp .gap b{font-family:var(--mono);font-size:10.5px;color:var(--bad);letter-spacing:.06em;margin-right:6px}
+.comp .gap b.l{color:var(--senior)}
+
+/* range ladder */
+.ladder{position:relative;margin-top:8px}
+.lrow{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:16px;padding:12px 0;border-top:1px solid var(--line)}
+.lrow:first-child{border-top:0}
+.lrow .g b{display:block;font-size:14px}
+.lrow .g span{font-size:12px;color:var(--muted)}
+.lt{position:relative;min-height:26px}
+.it{position:relative;height:24px}
+.it .m{position:absolute;top:8px;height:8px;border-radius:5px}
+.it .m.dot{width:12px;height:12px;top:6px;border-radius:50%;transform:translateX(-6px)}
+.it .t{position:absolute;top:1px;font-size:12px;white-space:nowrap;color:var(--ink-2);background:var(--surface);padding:0 4px;border-radius:4px;z-index:2}
+.it .m{z-index:2}
+.it .t b{color:var(--ink);font-weight:600}
+.axisx{display:grid;grid-template-columns:minmax(0,190px) minmax(0,1fr);gap:16px;margin-top:4px}
+.axisx .ticks{position:relative;height:18px;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.axisx .ticks span{position:absolute;transform:translateX(-50%);white-space:nowrap}
+.e361{position:absolute;top:0;bottom:0;width:2px;background:var(--head);pointer-events:none;z-index:1}
+.e361 span{position:absolute;top:-24px;left:50%;transform:translateX(-50%);white-space:nowrap;font-size:11.5px;font-weight:600;background:var(--navy);color:var(--on-navy);padding:3px 9px;border-radius:999px}
+.ladder-wrap{overflow-x:auto;padding-top:26px}
+.ladder-inner{min-width:620px}
+
+/* families matrix */
+.mx{width:100%;border-collapse:collapse;min-width:720px}
+.mx th{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:500;padding:0 6px 8px;text-align:center}
+.mx th:first-child,.mx th:nth-child(2){text-align:left}
+.mx td{padding:10px 6px;border-top:1px solid var(--line);vertical-align:middle;text-align:center}
+.mx td:first-child{text-align:left}
+.fam{display:flex;gap:10px;align-items:center}
+.fam .ic{width:30px;height:30px;border-radius:50%;flex:0 0 30px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--mono);font-size:12px;font-weight:600}
+.fam b{font-size:14px}
+.fam .pill{font-size:10.5px;padding:2px 7px;border-radius:999px;background:var(--good-soft);color:var(--good);margin-left:6px;font-weight:600}
+.fam .pill.w{background:var(--senior-soft);color:var(--senior)}
+.fam small{display:block;font-size:12px;color:var(--muted)}
+.fam small em{font-style:normal;color:var(--good);font-weight:600}
+.doubt{color:var(--bad);font-size:13px;text-align:left !important;white-space:nowrap}
+.wd{display:inline-block;border-radius:50%;background:var(--family)}
+.wd.w2{width:18px;height:18px} .wd.w1{width:12px;height:12px;opacity:.55} .wd.w0{width:5px;height:5px;opacity:.35}
+.ages .r{margin-top:12px}
+.ages .r b{font-size:14px}
+.ages .ln{display:flex;align-items:center;gap:8px;margin-top:5px}
+.ages .ln i{height:10px;border-radius:6px;display:block}
+.ages .ln span{font-family:var(--mono);font-size:12.5px;font-weight:600}
+
+/* pain → strength */
+.ps{display:grid;grid-template-columns:52px minmax(0,1fr) 24px minmax(0,1fr) minmax(0,150px);gap:10px;align-items:center;padding:6px 0}
+.ps .nums{display:flex;gap:3px}
+.ps .nums i{width:22px;height:22px;border-radius:50%;color:#fff;font-style:normal;font-family:var(--mono);font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:600}
+.ps .pain{background:var(--bad-soft);border-radius:8px;padding:9px 12px;font-size:13.5px}
+.ps .str{background:var(--good-soft);color:#0B5E45;border-radius:8px;padding:9px 12px;font-size:13.5px;font-weight:600}
+.ps .ar{color:var(--good);text-align:center}
+.ps .lim{font-size:12.5px;color:var(--muted)}
+.why{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;background:var(--hero);color:var(--on-forest);border-radius:var(--r);padding:16px 22px}
+.why .lbl{color:var(--on-forest-2)}
+.why b{font-family:var(--display);font-weight:500;font-size:20px}
+.why small{font-size:12px;color:var(--on-forest-2)}
+
+/* compare table */
+.cmp{width:100%;border-collapse:separate;border-spacing:0 6px}
+.cmp th{padding:10px 14px;text-align:left;color:#fff;font-size:14.5px}
+.cmp th.f{background:var(--family);border-radius:10px 10px 0 0}
+.cmp th.s{background:var(--senior);border-radius:10px 10px 0 0}
+.cmp td{background:var(--surface);padding:10px 14px;font-size:14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.cmp td:first-child{font-weight:600;border-left:1px solid var(--line);border-radius:10px 0 0 10px;color:var(--ink-2);width:150px}
+.cmp td:last-child{border-right:1px solid var(--line);border-radius:0 10px 10px 0}
+.cmp td.f{box-shadow:inset 3px 0 0 var(--family)} .cmp td.s{box-shadow:inset 3px 0 0 var(--senior)}
+
+/* plans */
+.plan h3{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.plan h3 span{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--ink-2)}
+.area{display:flex;height:30px;border-radius:7px;overflow:hidden;gap:2px;margin-top:12px}
+.area div{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11.5px;font-weight:600;white-space:nowrap;overflow:hidden}
+.area .c{color:#fff} .area .b{background:var(--surface-2);color:var(--ink-2)} .area .w{background:var(--track)} .area .o{background:var(--surface-2);color:var(--muted)}
+.akey{display:flex;gap:14px;font-size:11.5px;color:var(--muted);margin-top:6px;flex-wrap:wrap}
+.akey span{display:inline-flex;align-items:center;gap:5px}
+.akey i{width:9px;height:9px;border-radius:2px;display:inline-block}
+.plan .eff{display:flex;justify-content:space-between;gap:10px;margin-top:10px;font-size:13.5px;color:var(--ink-2)}
+.plan .eff b{font-family:var(--mono)}
+.feat{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,180px);gap:12px;align-items:center;padding:11px 0;border-top:1px solid var(--line)}
+.feat:first-of-type{border-top:0}
+.feat b{font-size:14px;display:block}
+.feat .rt{display:flex;align-items:center;gap:8px;margin-top:5px}
+.feat .rt i{display:block;height:6px;border-radius:4px;width:110px;background:var(--track);position:relative;overflow:hidden}
+.feat .rt i em{position:absolute;inset:0 auto 0 0;border-radius:4px}
+.feat .rt span{font-family:var(--mono);font-size:12px;font-weight:600}
+.feat .who{font-size:12.5px;color:var(--ink-2);background:var(--surface-2);border-radius:8px;padding:6px 10px}
+.colhead{border-radius:10px;padding:10px 14px;color:#fff;font-weight:600;font-size:14.5px}
+
+/* fits */
+.fit .hd{display:flex;justify-content:space-between;align-items:flex-end;gap:10px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.fit .hd .pr{font-family:var(--display);font-size:28px;font-weight:600;letter-spacing:-.01em;color:var(--head);line-height:1}
+.fit .hd .pr small{font-family:var(--body);font-size:12px;color:var(--muted);font-weight:400}
+.fit .hd p{font-size:12.5px;color:var(--muted);margin-top:4px}
+.fr{display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr) minmax(0,1fr);gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.fr .k{font-weight:600;color:var(--ink-2)}
+.fr .y::before{content:"✓ ";color:var(--good);font-weight:700}
+.fr .n{color:var(--bad)} .fr .n::before{content:"✕ ";font-weight:700}
+.fr.h{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fr.h .y::before,.fr.h .n::before{content:""}
+.fr.h .n{color:var(--muted)}
+.q4{display:grid;grid-template-columns:minmax(0,140px) repeat(4,minmax(0,1fr));gap:10px;align-items:center;background:var(--hero);border-radius:var(--r);padding:14px}
+.q4 > b{color:var(--on-forest);font-size:14px}
+.q4 div{background:rgba(255,255,255,.1);border-radius:10px;padding:10px 12px;color:var(--on-forest);font-size:13.5px;display:flex;gap:9px;align-items:center}
+.q4 div i{font-style:normal;width:22px;height:22px;flex:0 0 22px;border-radius:50%;background:#fff;color:#0A0A0A;display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:11px;font-weight:700}
+
+/* income */
+.inc{display:grid;gap:14px;margin-top:10px}
+.ir{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:14px;align-items:center}
+.ir b{font-size:14px;display:block}
+.ir small{font-size:12px;color:var(--muted)}
+.itr{position:relative;height:22px;background:transparent}
+.itr .seg{position:absolute;top:0;bottom:0}
+.itr .seg.g{background:var(--good)} .itr .seg.a{background:var(--senior)} .itr .seg.x{background:var(--other)}
+.thr{position:absolute;top:-6px;bottom:-6px;border-left:1.5px dashed}
+.iaxis{display:grid;grid-template-columns:minmax(0,170px) minmax(0,1fr);gap:14px}
+.iaxis .ticks{position:relative;height:30px;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.iaxis .ticks span{position:absolute;transform:translateX(-50%);top:4px;white-space:nowrap}
+.thl{font-size:12px;margin-top:4px;display:flex;flex-wrap:wrap;gap:4px 16px}
+.lives{display:grid;gap:0}
+.lives div{padding:10px 0;border-top:1px solid var(--line)}
+.lives div:first-child{border-top:0}
+.lives b{font-size:14px;display:block}
+.lives span{font-size:12.5px;color:var(--muted)}
+.lives .me b{color:var(--senior)}
+
+/* handle */
+.hz{background:var(--bad-soft);border-radius:12px;padding:14px 16px;display:grid;gap:4px}
+.hz b{font-size:14px}
+.hz .sc{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.hz .fx{font-size:13.5px;color:var(--good);font-weight:600}
+.hz .fx::before{content:'→ '}
+
+/* NRI */
+.cal{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px}
+.cal div{text-align:center}
+.cal .m{border-radius:8px;padding:9px 0;font-weight:600;font-size:13px;background:var(--surface-2);color:var(--muted)}
+.cal .m.h{background:var(--family);color:#fff} .cal .m.a{background:var(--senior);color:#fff} .cal .m.s{background:var(--blue);color:#fff}
+.cal small{display:block;font-size:11px;color:var(--muted);margin-top:5px;min-height:15px}
+.br.dim{color:var(--muted)} .br.dim .tr i{background:var(--other)}
+
+@media (max-width:900px){
+  .land{grid-template-columns:1fr;gap:28px;padding-block:32px 16px}
+  .g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .g3{grid-template-columns:1fr}
+  .q4{grid-template-columns:1fr 1fr}
+  .q4 > b{grid-column:1 / -1}
+  .ps{grid-template-columns:52px minmax(0,1fr);}
+  .ps .ar{display:none}
+  .ps .str{grid-column:2}
+  .ps .lim{grid-column:2;padding-left:4px}
+  .cal{grid-template-columns:repeat(5,minmax(0,1fr))}
+}
+@media (max-width:640px){
+  .g2{grid-template-columns:1fr}
+  .gets{grid-template-columns:1fr}
+  .pmeta{grid-template-columns:1fr 1fr 1fr}
+  .score-wrap{grid-template-columns:1fr}
+  .br{grid-template-columns:minmax(0,120px) minmax(0,1fr) 48px}
+  .fr{grid-template-columns:minmax(0,88px) minmax(0,1fr) minmax(0,1fr);font-size:12.5px}
+  .ir,.iaxis{grid-template-columns:1fr}
+  .iaxis > div:first-child{display:none}
+  .feat{grid-template-columns:1fr}
+  .cmp td:first-child{width:96px}
+  .top .meta{display:none}
+  .ladder-inner{min-width:0}
+  .lrow,.axisx{grid-template-columns:1fr;gap:6px}
+  .axisx > div:first-child{display:none}
+  .it{height:auto;min-height:36px;padding-top:20px;margin-bottom:6px}
+  .it .t{top:0;left:0 !important;right:auto !important;padding-left:0;background:transparent}
+  .it .m{top:auto;bottom:0} .it .m.dot{top:auto;bottom:-2px}
+  .lt{padding-bottom:2px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none !important;transition:none !important}}
+
+/* ---- Advait additions ---- */
+.hero{border-radius:18px;padding:26px 28px;border:1px solid #CDE6DA;border-left:6px solid var(--good);background:var(--good-soft)}
+.hero .lbl{color:var(--good);font-weight:600}
+.hero h2{font-size:clamp(28px,4.2vw,46px);line-height:1.07;margin-top:10px;letter-spacing:-.01em}
+.hero p{font-size:17px;color:var(--ink-2);margin-top:12px;max-width:72ch}
+.hero p b{color:var(--ink)}
+.risk{border-radius:14px;padding:18px 22px;background:var(--bad-soft);border:1px solid #F3CFCF;border-left:6px solid var(--bad)}
+.risk .lbl{color:var(--bad);font-weight:600}
+.risk p{font-size:15.5px;margin-top:6px;color:var(--ink-2)} .risk p b{color:var(--ink)}
+.fc{border-radius:14px;padding:18px 20px;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--blue)}
+.fc .q{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.fc .v{font-family:var(--display);font-size:clamp(30px,3.4vw,40px);font-weight:600;line-height:1;margin-top:8px;color:var(--head)}
+.fc .v small{font-family:var(--body);font-size:.42em;color:var(--muted);font-weight:500}
+.fc p{font-size:13px;color:var(--ink-2);margin-top:8px}
+.moves{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.move{border-radius:14px;padding:18px 20px;background:var(--surface);border:1px solid var(--line)}
+.move .n{width:28px;height:28px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;font-size:12px;color:#fff;background:var(--ink)}
+.move h4{margin:10px 0 0;font-family:var(--display);font-size:20px;font-weight:600;line-height:1.2;color:var(--head)}
+.move p{font-size:13.5px;color:var(--ink-2);margin-top:6px}
+/* supply timeline */
+.tl2{position:relative;margin-top:6px}
+.tl2 .row{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:14px;align-items:center;padding:9px 0;border-top:1px solid var(--line)}
+.tl2 .row:first-of-type{border-top:0}
+.tl2 .nm b{display:block;font-size:14px}
+.tl2 .nm span{font-size:12px;color:var(--muted)}
+.tl2 .tr{position:relative;height:24px}
+.tl2 .bar{position:absolute;top:7px;height:10px;border-radius:6px;background:var(--track)}
+.tl2 .bar.build{background:repeating-linear-gradient(135deg,var(--other) 0 6px,#E9E5DC 6px 12px)}
+.tl2 .key{position:absolute;top:2px;width:20px;height:20px;border-radius:50%;transform:translateX(-10px);display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px;font-weight:700}
+.tl2 .lab{position:absolute;top:2px;font-size:12px;font-weight:600;white-space:nowrap;background:var(--surface);padding:0 4px;border-radius:4px}
+.tl2 .ready{position:absolute;top:7px;height:10px;border-radius:6px;background:var(--good)}
+.tl2 .years{display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:14px}
+.tl2 .years .t{position:relative;height:20px;font-family:var(--mono);font-size:10.5px;color:var(--muted)}
+.tl2 .years .t span{position:absolute;transform:translateX(-50%)}
+.tl2 .now{position:absolute;top:0;bottom:22px;width:2px;background:var(--bad);z-index:1}
+.tl2 .now span{position:absolute;top:-20px;left:50%;transform:translateX(-50%);font-size:11px;font-weight:600;color:#fff;background:var(--bad);padding:2px 8px;border-radius:999px;white-space:nowrap}
+.tl2-wrap{overflow-x:auto;padding-top:22px}
+.tl2-inner{min-width:720px}
+.window{position:absolute;top:0;bottom:22px;background:rgba(15,138,100,.07);border-left:1px dashed var(--good);border-right:1px dashed var(--good);z-index:0}
+.window span{position:absolute;bottom:4px;left:6px;font-size:11px;font-weight:600;color:var(--good);white-space:nowrap}
+/* audit */
+.audit{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.claim{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;padding:10px 0;border-top:1px solid var(--line);font-size:14px}
+.claim:first-of-type{border-top:0}
+.claim i{font-style:normal;width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff}
+.claim i.x{background:var(--bad)} .claim i.k{background:var(--good)}
+.claim b{display:block}
+.claim span{font-size:12.5px;color:var(--muted)}
+/* segments */
+.seg{display:grid;grid-template-columns:34px minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.2fr);gap:12px;align-items:start;padding:12px 0;border-top:1px solid var(--line);font-size:13.5px}
+.seg:first-of-type{border-top:0}
+.seg .rk{width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--mono);font-weight:700;font-size:12px}
+.seg b{display:block;font-size:14.5px}
+.seg .sz{font-size:12px;color:var(--muted)}
+.seg .tagx{display:inline-block;font-size:11px;font-weight:600;padding:2px 8px;border-radius:999px;margin-top:4px}
+.seg-h{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);display:grid;grid-template-columns:34px minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.2fr);gap:12px;padding-bottom:6px;border-bottom:1px solid var(--line)}
+/* plan phases */
+.phases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.ph{border-radius:14px;padding:16px 18px;background:var(--surface);border:1px solid var(--line);display:flex;flex-direction:column;gap:6px}
+.ph .when{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--muted)}
+.ph h4{margin:0;font-family:var(--display);font-size:20px;font-weight:600;line-height:1.15;color:var(--head)}
+.ph ul{list-style:none;margin:4px 0 0;padding:0}
+.ph li{font-size:13px;line-height:1.4;padding:7px 0 7px 14px;border-top:1px solid var(--line);position:relative;color:var(--ink-2)}
+.ph li:first-child{border-top:0}
+.ph li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.5}
+.ph li b{color:var(--ink)}
+.ph.p0{border-top:4px solid var(--bad)} .ph.p1{border-top:4px solid var(--blue)} .ph.p2{border-top:4px solid var(--senior)} .ph.p3{border-top:4px solid var(--good)}
+.fix{display:grid;grid-template-columns:minmax(0,1fr) 54px minmax(0,1.2fr);gap:12px;align-items:center;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px}
+.fix:first-of-type{border-top:0}
+.fix .rs{font-family:var(--mono);font-weight:700;text-align:center;border-radius:6px;padding:3px 0;font-size:12px}
+.fix .rs.r{background:var(--bad-soft);color:var(--bad)} .fix .rs.a{background:var(--senior-soft);color:var(--senior)}
+.fix .ow{font-size:12.5px;color:var(--muted)}
+/* budget table */
+.bt{width:100%;border-collapse:collapse;font-size:13.5px;min-width:640px}
+.bt th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;font-weight:500;padding:0 10px 8px 0;border-bottom:1px solid var(--line)}
+.bt th.n,.bt td.n{text-align:right;padding-right:18px}
+.bt td{padding:10px 10px 10px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.bt td.n{font-family:var(--mono);font-weight:600}
+.bt td .sw{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:8px;vertical-align:0}
+.bt tr.tot td{font-weight:700;border-bottom:0;padding-top:12px}
+.bt td small{display:block;font-size:12px;color:var(--muted);font-weight:400;margin-top:2px}
+.bstack{display:flex;height:34px;border-radius:8px;overflow:hidden;gap:2px;margin-top:10px}
+.bstack div{display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:600;color:#fff;white-space:nowrap;overflow:hidden}
+/* funnel */
+.ctrl{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.seg-btn{display:inline-flex;background:var(--surface-2);border-radius:999px;padding:4px;gap:2px}
+.seg-btn button{border:0;background:transparent;padding:8px 14px;border-radius:999px;font-size:13.5px;font-weight:500;color:var(--muted)}
+.seg-btn button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.funnel{display:grid;gap:8px;margin-top:6px}
+.fs{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr) 90px;gap:12px;align-items:center}
+.fs .lb{font-size:14px;font-weight:600}
+.fs .lb small{display:block;font-size:12px;color:var(--muted);font-weight:400}
+.fs .bx{height:40px;border-radius:8px;display:flex;align-items:center;padding-inline:12px;color:#fff;font-weight:700;font-family:var(--mono);font-size:14px;min-width:46px;transition:width .35s ease}
+.fs .rt{font-family:var(--mono);font-size:12px;color:var(--muted);text-align:right}
+.res{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.bench td{font-size:13px}
+.units{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}
+.units i{width:16px;height:16px;border-radius:4px;display:block}
+@media (max-width:900px){
+  .moves,.phases{grid-template-columns:1fr 1fr}
+  .res{grid-template-columns:1fr 1fr}
+  .audit{grid-template-columns:1fr}
+  .seg,.seg-h{grid-template-columns:34px minmax(0,1fr) minmax(0,1fr)}
+  .seg > :nth-child(4),.seg-h > :nth-child(4){grid-column:2 / -1}
+}
+@media (max-width:640px){
+  .moves,.phases{grid-template-columns:1fr}
+  .fs{grid-template-columns:minmax(0,96px) minmax(0,1fr) 64px}
+  .fix{grid-template-columns:minmax(0,1fr) 48px}
+  .fix .ow{grid-column:1 / -1}
+}
+</style>
+<style>html,body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></span><b>Fixit</b><span>Project analysis</span></div>
+    <div class="meta">Go-to-market plan for the promoter · October 2026 · Confidential</div>
+  </header>
+
+  <!-- LANDING -->
+  <section id="landing" class="land">
+    <div>
+      <div class="lbl">Fixit · Project analysis</div>
+      <h1 style="margin-top:14px">One project. The full plan.</h1>
+      <p class="lede">Fixit reads the project, the market, every live competitor ad and the buyers behind them. Then it builds the plan, the budget and a very conservative forecast you can hold us to.</p>
+      <div class="gets">
+        <div><b>01</b>Summary for the promoter</div>
+        <div><b>02</b>The Greater Noida market</div>
+        <div><b>03</b>Competitors and their campaigns</div>
+        <div><b>04</b>The buyers</div>
+        <div><b>05</b>Plan of action</div>
+        <div><b>06</b>Budget</div>
+        <div><b>07</b>Funnel and forecast</div>
+      </div>
+    </div>
+    <div class="proj">
+      <div class="cover">
+        <div class="k">OMICRON 1A · GREATER NOIDA · PARI CHOWK BELT</div>
+        <div class="n">7 Peaks</div>
+        <div class="d">ELDECO · 3 &amp; 4 BHK · 820 HOMES · 7 TOWERS</div>
+        <svg width="190" height="190" viewBox="0 0 190 190" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><circle cx="95" cy="95" r="90"/><circle cx="95" cy="95" r="62"/><circle cx="95" cy="95" r="34"/><path d="M5 140 L185 40"/><path d="M70 5 L120 185"/></g></svg>
+      </div>
+      <div class="pmeta">
+        <div><b>₹13,000</b><span>BSP per sq ft</span></div>
+        <div><b>₹2.37–3.71 Cr</b><span>base price</span></div>
+        <div><b>Nov 2030</b><span>RERA completion</span></div>
+      </div>
+      <div class="srcs" aria-label="Sources read"><span>Buyer Intelligence Workbook</span><span>UP-RERA</span><span>Meta Ad Library</span><span>Google Ads Transparency</span><span>Search demand</span><span>Market reports</span></div>
+      <button class="go" id="go" type="button">Analyse 7 Peaks <span aria-hidden="true">→</span></button>
+      <ol class="steps" id="steps" hidden>
+        <li><span class="dot">1</span>Reading the 7 Peaks workbook and unit plans</li>
+        <li><span class="dot">2</span>Pricing it against launches and ready stock nearby</li>
+        <li><span class="dot">3</span>Scanning competitor ads on Meta and Google</li>
+        <li><span class="dot">4</span>Sizing buyers: investors, upgraders, doctors, NRIs</li>
+        <li><span class="dot">5</span>Building the plan, budget and funnel</li>
+      </ol>
+      <p class="note-sm">Analysis as of 15 October 2026. Takes a few seconds.</p>
+    </div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <section id="dash" hidden>
+    <div class="dhead">
+      <div>
+        <div class="sub">Eldeco · 7 Peaks Residences · Omicron 1A, Greater Noida</div>
+        <h1>Go-to-market plan for the promoter</h1>
+      </div>
+      <button class="ghost" id="restart" type="button">Start over</button>
+    </div>
+    <nav class="tabs" aria-label="Plan sections"><div class="row" role="tablist" id="tablist"></div></nav>
+
+    <!-- 1 SUMMARY -->
+    <div class="panel" role="tabpanel" id="p-summary" data-tab="summary" data-name="Summary">
+      <div class="hero">
+        <div class="lbl">The opportunity</div>
+        <h2>7 Peaks sells a 2030 home at close to today's ready-flat price, with the airport already flying.</h2>
+        <p>At ₹13,000 a sq ft it is within 4% of what ATS Dolce's ready flats resell for, and 13% below the median of the branded launches around it. Godrej Arden, 4 km away, booked ₹1,529 Cr in its launch quarter at about the same rate. <b>The demand is there. The job is to tell 7 Peaks' story in one voice.</b></p>
+      </div>
+      <div class="risk">
+        <div class="lbl">The risk</div>
+        <p><b>Brokers are telling the story, and getting it wrong.</b> Live ads call 7 Peaks "Greater Noida (West)" and "pre-launch" nine months after launch. A look-alike site, eldecongroup.com, promises keys in mid-2028; RERA says November 2030. One broker's site ran 11 Google ads in 30 days, more than Eldeco's own 9.</p>
+      </div>
+      <div class="g4">
+        <div class="tile"><div class="v">₹1,529 Cr</div><p>booked by Godrej Arden, 4 km away, in its launch quarter at ~₹12,960/sq ft</p></div>
+        <div class="tile bad"><div class="v">13</div><p>look-alike "7 Peaks" web addresses that have run Google ads</p></div>
+        <div class="tile ok"><div class="v">12,100</div><p>monthly searches for Eldeco Green Meadows: the owner base to work one-to-one</p></div>
+        <div class="tile"><div class="v">Nov 2030</div><p>RERA completion. 30:40:30 plan, so 70% is paid before keys.</p></div>
+      </div>
+      <div class="sec">
+        <div class="lbl" style="color:var(--blue)">Very conservative forecast · bookings this plan delivers</div>
+        <div class="g4">
+          <div class="fc"><div class="q">This quarter · 15 Oct – 31 Dec</div><div class="v" id="s-q3">5 <small>bookings</small></div><p id="s-q3v">≈ ₹14 Cr booked</p></div>
+          <div class="fc"><div class="q">Next quarter · Jan – Mar 2027</div><div class="v" id="s-q4">11 <small>bookings</small></div><p id="s-q4v">≈ ₹29 Cr booked</p></div>
+          <div class="fc" style="border-top-color:var(--senior)"><div class="q">Budget · two quarters</div><div class="v">₹30 L</div><p>₹12 L this quarter, ₹18 L next. Media, partners, events, content and CRM.</p></div>
+          <div class="fc" style="border-top-color:var(--good)"><div class="q">Budget per home sold</div><div class="v" id="s-cpb">0.70%</div><p id="s-cpbp">~₹1.84 L a booking, inside the 0.6–0.95% rule in both quarters</p></div>
+        </div>
+      </div>
+      <div class="sec">
+        <div class="lbl">Three moves</div>
+        <div class="moves">
+          <div class="move"><span class="n" style="background:var(--bad)">1</span><h4>One voice, one cost sheet</h4><p>Publish the price sheet with dated slabs, the per-kVA backup charge and reconcile RERA's 700 registered homes with the 820 marketed. Give every channel partner one fact sheet, and pull "pre-launch", "GN West" and "low-density".</p></div>
+          <div class="move"><span class="n" style="background:var(--blue)">2</span><h4>Sell the hold, and the home</h4><p>Investors get the dated ATS Dolce benchmark, never a return. Upgraders, doctors and Kasna owners get light, design and a short drive, never space.</p></div>
+          <div class="move"><span class="n" style="background:var(--good)">3</span><h4>Make partners the media</h4><p>Channel-partner site-visit drives, investor evenings in Meerut, Agra and with Delhi wealth managers, and a Gulf NRI campaign from January 2027.</p></div>
+        </div>
+      </div>
+      <div class="sec"><div class="lbl">Read the plan</div><div class="g3" id="jumps"></div></div>
+      <p class="src">Eldeco 7 Peaks Buyer Intelligence Workbook and visual summary (Oct 2026). Fixit scan, 15 Oct 2026: Meta Ad Library (India), Google Ads Transparency Centre (last 30 days and domain search), search volumes (seodata.dev). Godrej Arden sales from Godrej Properties' Q4 FY26 results (May 2026); market from ANAROCK Q2 and Q3 2026; unit count from the UP-RERA registration. Inventory sold not supplied by the owner; forecast detail in the Funnel and Budget tabs.</p>
+    </div>
+
+    <!-- 2 MARKET -->
+    <div class="panel" role="tabpanel" id="p-market" data-tab="market" data-name="Market" hidden>
+      <div class="sec">
+        <span class="tag">A · The market</span>
+        <h2>Greater Noida has a record, and now an airport.</h2>
+        <div class="g4" id="mtiles">
+          <div class="tile ok"><div class="v">+98%</div><p>Greater Noida apartment prices, Q1 2020 – Q1 2025 (ANAROCK)</p></div>
+          <div class="tile ok"><div class="v">Jun 2026</div><p>Noida International Airport began commercial flights; international flights expected late 2026</p></div>
+          <div class="tile"><div class="v">108×</div><p>oversubscribed: 105,842 applications for 973 YEIDA plots (Apr 2026)</p></div>
+          <div class="tile"><div class="v">+12%</div><p>NCR average price, year on year, Q3 2026: the fastest of India's top seven cities (ANAROCK)</p></div>
+        </div>
+        <div class="call bad"><b>But the market has slowed.</b> Noida and Greater Noida sales fell 20% year on year in Apr–Jun 2026, and launches fell 72%. Greater Noida holds about a quarter of NCR's unsold homes. That is why this forecast is very conservative.</div>
+        <div class="call" style="background:var(--senior-soft)" id="mcall"><b style="color:var(--senior)">Investors are a primary buyer here, not a fringe.</b> The workbook's flip test passes: at possession, 7 Peaks would sit about 14% above ATS Dolce-grade ready stock grown at 7% a year. Present it as an expectation with its date, never as a return.</div>
+      </div>
+      <div class="sec">
+        <h2>Where 7 Peaks sits on price.</h2>
+        <div class="card"><div class="ladder-wrap"><div class="ladder-inner" id="ladder"></div></div></div>
+        <div class="g3">
+          <div class="card" style="border-top:3px solid var(--good)"><h3>Below the launches' median</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">13% under the median of Sobha Aurum, Godrej Arden and Godrej Crown. The strongest price story in the workbook.</p></div>
+          <div class="card" style="border-top:3px solid var(--bad)"><h3>Above the old sector stock</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">About 2.5× Omicron's 15-year-old resale. It's the only red-flag concern, and it's permanent. Answer it by comparing with new launches.</p></div>
+          <div class="card" style="border-top:3px solid var(--blue)"><h3>Rent offsets, never income</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">Yields at possession run ~1.8–2.2% gross and ~1.2% net; rent offsets only part of the EMI. Never quote a yield.</p></div>
+        </div>
+      </div>
+      <div class="sec">
+        <h2>How buyers search.</h2>
+        <div class="g2">
+          <div class="card"><h3>Monthly Google searches</h3><p class="cap">India · seodata.dev estimates · — means too few to register</p><div class="bars" id="b-search"></div></div>
+          <div class="card" style="display:grid;gap:12px;align-content:start">
+            <div class="call ok"><b>Buyers search by size and city.</b> "3 BHK flats in Greater Noida" and its variants draw about 1,000 searches a month each, at under a dollar a click.</div>
+            <div class="call" style="background:var(--blue-soft)"><b style="color:#1E40AF">Eldeco's name is searched for its past projects.</b> Green Meadows alone draws ~12,100 searches a month. 7 Peaks has to borrow that trust, one owner at a time.</div>
+            <div class="call bad"><b>No new project name registers.</b> Not 7 Peaks, not Godrej Arden, not Sobha Aurum. Brand search is open ground for whoever builds it first.</div>
+          </div>
+        </div>
+      </div>
+      <p class="src" id="msrc">ANAROCK via the workbook (Apr 2025); Noida International Airport operator/PTI, Jun 2026; YEIDA plot scheme, Apr 2026; ANAROCK NCR Q3 2026, Noida/Greater Noida Q2 2026 and Q1 2026. Godrej Arden's sold rate derived from Godrej Properties' Q4 FY26 results (₹1,529 Cr ÷ 1.18 msf). Price ladder: workbook census, Oct 2026 (BSP for launches, asking for ready stock). Yields and flip test: workbook Sheets 01C and 12. Search: seodata.dev estimates, Oct 2026.</p>
+    </div>
+
+    <!-- 3 COMPETITORS -->
+    <div class="panel" role="tabpanel" id="p-compete" data-tab="compete" data-name="Competitors" hidden>
+      <div class="sec">
+        <span class="tag bad">B · Competitors and campaigns</span>
+        <h2>Who is selling to 7 Peaks' buyers today.</h2>
+        <div class="g3" id="comps">
+          <div class="card comp"><div class="who"><b>Godrej Arden</b><span>Sigma 3 · ~4 km</span></div><h4>₹1,529 Cr in one quarter</h4><div class="pf">1.18 msf sold, Jan–Mar 2026<br>≈ ₹12,960/sq ft realised<small>Godrej Properties Q4 FY26 results</small></div><p style="font-size:13px;color:var(--ink-2)">Launched in March, five weeks after 7 Peaks, on the same 30:40:30 plan. Still on Meta: "from ₹3.02 Cr", 5+ fresh ads on 13–14 Oct.</p><div class="gap"><b class="l">LESSON</b>Buyers already pay ₹13,000 here. They paid for the brand's certainty.</div></div>
+          <div class="card comp"><div class="who"><b>Sobha Aurum</b><span>Sector 36 · ~8 km</span></div><h4>Priced up, gone quiet</h4><div class="pf">₹15,000 → ~₹16,000/sq ft<br>~80% sold · no live Meta ads<small>broker note, Jan 2026; Meta Ad Library</small></div><p style="font-size:13px;color:var(--ink-2)">420 homes, launched mid-2025 and priced up within a year. Now absent from paid social.</p><div class="gap"><b class="l">LESSON</b>Aurum now asks ~₹3,000 a sq ft more than 7 Peaks.</div></div>
+          <div class="card comp"><div class="who"><b>Godrej Crown Residences</b><span>Sector 27 · Golf Links</span></div><h4>The premium end</h4><div class="pf">~₹16,100/sq ft<br>Launched Jun 2026<small>listings, indicative</small></div><p style="font-size:13px;color:var(--ink-2)">Godrej's golf-township address. Sets the ceiling a 7 Peaks buyer compares against.</p><div class="gap"><b class="l">LESSON</b>Compare only with new launches, never with old Omicron stock.</div></div>
+          <div class="card comp"><div class="who"><b>CRC Maesta · Sobha Rivana</b><span>Greater Noida West</span></div><h4>The West's pull</h4><div class="pf">₹2.45–3.35 Cr (CRC ads)<br>Sobha Rivana ~₹14,075/sq ft</div><p style="font-size:13px;color:var(--ink-2)">Brokers lump 7 Peaks in with "Greater Noida West" projects. That's a different market, 20 km away.</p><div class="gap"><b>RISK</b>Every "GN West" ad pulls 7 Peaks into the wrong comparison.</div></div>
+          <div class="card comp"><div class="who"><b>ATS Dolce</b><span>Zeta 1 · ready</span></div><h4>The benchmark, not a rival</h4><div class="pf">Resale ~₹12,500/sq ft<br>Delivered Feb 2024<small>3 listings, Oct 2026</small></div><p style="font-size:13px;color:var(--ink-2)">The newest ready flats in the belt. 7 Peaks' BSP is 4% above them for a building done in 2030.</p><div class="gap"><b class="l">USE IT</b>The dated ATS Dolce census is the investor's proof.</div></div>
+          <div class="card comp"><div class="who"><b>Your own EOI buyers</b><span>Resale from Jan 2027</span></div><h4>A competitor you created</h4><div class="pf">EOI at ₹12,000<br>~8% paper gain today</div><p style="font-size:13px;color:var(--ink-2)">From Sustenance, EOI buyers can undercut the list price on resale portals.</p><div class="gap"><b>WATCH</b>Track assignment listings; turn EOI buyers into referrers.</div></div>
+        </div>
+      </div>
+      <div class="sec">
+        <h2>7 Peaks' ads, audited.</h2>
+        <div class="audit">
+          <div class="card"><h3>What the live ads say</h3><p class="cap">Meta Ad Library, India, 15 Oct 2026 · "Eldeco Projects" and broker pages</p>
+            <div style="margin-top:8px">
+              <div class="claim"><i class="k">✓</i><div><b>"Whether the builder finishes… 40 years, 200+ projects, 30,000+ homes"</b><span>A broker, Vidastu Advisory, leads with delivery trust. The right story for an investor.</span></div></div>
+              <div class="claim"><i class="x">✕</i><div><b>"Pre-launch price: ₹13,000/sq ft"</b><span>"Eldeco Projects" page, 23 Sep and 8 Oct. The project launched on 28 Jan 2026.</span></div></div>
+              <div class="claim"><i class="x">✕</i><div><b>"Possession mid-2028"</b><span>eldecongroup.com, a look-alike of Eldeco's own domain. UP-RERA completion is 14 Nov 2030.</span></div></div>
+              <div class="claim"><i class="x">✕</i><div><b>"820" · "850" · "900" homes</b><span>Microsites disagree. The UP-RERA registration lists 700 homes in 6 towers, plus 16 shops.</span></div></div>
+              <div class="claim"><i class="x">✕</i><div><b>"Eldeco 7 Peaks, Greater Noida (West)"</b><span>BazaarX, 7 Oct. It's Omicron 1A, Greater Noida, a different market from GN West.</span></div></div>
+              <div class="claim"><i class="x">✕</i><div><b>"80% open green spaces" · "No concrete. No other tower."</b><span>Open space is unverified, and the green belt's no-build status isn't confirmed in writing.</span></div></div>
+              <div class="claim"><i class="x">✕</i><div><b>"Low-density" · "7.5 acres" · "Omicron 1"</b><span>111 homes an acre, 7.37 acres, Omicron 1A. Small errors a buyer's lawyer will find.</span></div></div>
+            </div></div>
+          <div class="card"><h3>Google: the name is up for grabs</h3>
+            <div class="bars" style="margin-top:12px">
+              <div class="br"><span>eldeco-7peaks.com (one broker), 30 days</span><div class="tr"><i style="width:100%;background:var(--broker)"></i></div><span class="val">11</span></div>
+              <div class="br me"><span>eldecogroup.com (Eldeco), 30 days</span><div class="tr"><i style="width:82%"></i></div><span class="val">9</span></div>
+              <div class="br"><span>look-alike "7 Peaks" domains</span><div class="tr"><i style="width:100%;background:var(--senior)"></i></div><span class="val">13</span></div>
+              <div class="br zero"><span><b>"eldeco 7 peaks" searches/mo</b></span><div class="tr"></div><span class="val">—</span></div>
+            </div>
+            <div class="call bad" style="margin-top:14px"><b>The buyer's first click may not be Eldeco's.</b> Thirteen domains such as eldeco7peaks.in, eldeco-7peaks.site and eldecosevenpeaks.com have advertised on the name. Defend brand search and give partners one approved landing page.</div></div>
+        </div>
+      </div>
+      <p class="src" id="csrc">Meta Ad Library live ads, India, 15 Oct 2026 (keywords "Eldeco 7 Peaks", "Godrej Arden", "Sobha Aurum"). Google Ads Transparency Centre, India: eldecogroup.com 9 ads and eldeco-7peaks.com 11 ads in the last 30 days; domain search for "eldeco". Competitor prices: workbook census (Oct 2026) and live ads. Sales: Godrej Properties Q4 FY26 and Q1 FY27 results; Sobha Q1 FY26 operational update; Sobha Aurum share sold from a broker note (Jan 2026). Unit count: UP-RERA registration data. Claim checks against the workbook's "never say" list and Sheet 15.</p>
+    </div>
+
+    <!-- 4 BUYERS -->
+    <div class="panel" role="tabpanel" id="p-buyers" data-tab="buyers" data-name="Buyers" hidden>
+      <div class="sec">
+        <span class="tag c">C · The buyers</span>
+        <h2>Nine buyer groups, ranked for today.</h2>
+        <div class="card">
+          <div class="seg-h"><span></span><span>Who</span><span>Where we find them</span><span>First move</span></div>
+          <div id="segs"></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center"><b style="color:var(--bad);font-size:14px">Don't pay for:</b><span class="chip no">Noida Expressway owners (above tier)</span><span class="chip no">Assured-return seekers</span><span class="chip no">Renting first-home buyers (until a possession-linked plan exists)</span><span class="chip no">Students and nurses near the campuses</span></div>
+      </div>
+      <div class="sec">
+        <h2>Six families. All six can buy now.</h2>
+        <div class="card" style="overflow-x:auto"><table class="mx" id="mx"></table>
+          <div class="legend"><span><i class="wd w2" style="width:12px;height:12px"></i>weighs most</span><span><i class="wd w1" style="width:10px;height:10px"></i>weighs</span><span><i class="wd w0"></i>minor</span></div></div>
+      </div>
+      <div class="sec">
+        <h2>What closes them.</h2>
+        <div class="g2">
+          <div class="card" id="pains"></div>
+          <div style="display:grid;gap:12px;align-content:start">
+            <div class="banner"><div class="big" style="font-size:30px">5 of 6</div><p>families weigh the <b>brand</b> most, and four weigh <b>price</b>. Delivery trust and the entry price do the selling.</p></div>
+            <div class="card"><h3>The first call: four questions</h3><ol style="margin:10px 0 0 18px;font-size:14px;line-height:1.7;color:var(--ink-2)"><li>Who lives with you, and will parents stay?</li><li>Do you need a room for live-in help?</li><li>Where do you work? Will you test the 9 a.m. drive?</li><li>Can you pay ₹84 L–1.31 Cr within six months, and 70% before November 2030?</li></ol></div>
+            <div class="call ok"><b>What closes the remote buyer:</b> the UP-RERA schedule showing their tower, a dated slab schedule and full cost sheet, Eldeco's OC dates in Greater Noida, and monthly video slab reports.</div>
+          </div>
+        </div>
+      </div>
+      <p class="src">Eldeco 7 Peaks Buyer Intelligence Workbook: Sheets 06 Personas, 08 and 08B audiences, 11 Action Priorities (phase-adjusted ranks), visual summary need cards and pain-to-strength (Oct 2026). Buyer mix not disclosed; replace ranks with CRM data in week 2.</p>
+    </div>
+
+    <!-- 5 PLAN -->
+    <div class="panel" role="tabpanel" id="p-plan" data-tab="plan" data-name="Plan of action" hidden>
+      <div class="sec">
+        <span class="tag d">D · Plan of action</span>
+        <h2>Six months, four phases, one scoreboard: site visits.</h2>
+        <div class="phases">
+          <div class="ph p0"><div class="when">15 – 31 OCT</div><h4>One voice</h4><ul>
+            <li><b>Publish the price sheet and dated slabs</b>, the per-kVA charge and IFMS</li>
+            <li>Reconcile RERA's 700 homes in 6 towers with the 820 marketed</li>
+            <li><b>One fact sheet</b> for every partner; pull "pre-launch", "GN West", "low-density"</li>
+            <li>Defend brand search; act on look-alikes such as eldecongroup.com</li>
+            <li>CRM, WhatsApp and site-visit tracking live</li></ul></div>
+          <div class="ph p1"><div class="when">NOV – DEC</div><h4>Investors and upgraders</h4><ul>
+            <li><b>Dhanteras and Diwali, 6–8 Nov:</b> investor push with the dated ATS Dolce census</li>
+            <li>Investor evenings in <b>Meerut and Agra</b>; Delhi wealth-manager dinners</li>
+            <li>Hoardings on the 130 m road; society digital in Omicron, Pi, Zeta, Chi</li>
+            <li>Doctors: IMA Greater Noida and CMEs at Fortis, Sharda, Yatharth</li>
+            <li>Channel-partner meet and site-visit drives</li></ul></div>
+          <div class="ph p2"><div class="when">JAN – FEB 2027</div><h4>Sustenance opens</h4><ul>
+            <li><b>28 Jan:</b> Sustenance begins; re-approach every EOI and past enquiry</li>
+            <li><b>Gulf NRI campaign opens</b> (UAE first) with family-in-NCR visits</li>
+            <li>International flights at the airport, as news, not a promise</li>
+            <li>Expo Mart and trade fairs: Kasna and Ecotech owners</li></ul></div>
+          <div class="ph p3"><div class="when">MAR 2027</div><h4>Year-end and referrals</h4><ul>
+            <li><b>Financial year-end</b> investor decisions</li>
+            <li>Buyer-referral programme; monthly video slab reports</li>
+            <li>Track EOI-buyer resale listings</li>
+            <li>Re-plan Q1 FY28 on cost per site visit</li></ul></div>
+        </div>
+        <div class="strip"><b>Runs throughout:</b> Fixit runs the ads, builds the creative, optimises for site visits instead of leads, and follows up every enquiry within minutes. The promoter gets one page every Monday: spend, site visits, cost per visit, bookings, and spend as a % of homes sold.</div>
+      </div>
+      <div class="sec">
+        <h2>Seven fixable concerns, all documents you control.</h2>
+        <div class="card">
+          <div class="fix" style="font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-top:0"><span>Buyer concern</span><span style="text-align:center">Risk</span><span>Fix · owner</span></div>
+          <div class="fix"><span><b>Cost sheet and slab schedule not public</b></span><span class="rs a">12</span><span class="ow">Publish before any EOI or booking · Eldeco</span></div>
+          <div class="fix"><span><b>Power backup charged extra</b></span><span class="rs a">12</span><span class="ow">Publish the per-kVA charge in writing · Eldeco</span></div>
+          <div class="fix"><span><b>RERA lists 700 homes in 6 towers; ads say 820</b></span><span class="rs a">9</span><span class="ow">Register or explain the 7th tower in writing · Eldeco</span></div>
+          <div class="fix"><span><b>Channels publish wrong facts</b></span><span class="rs a">9</span><span class="ow">One fact sheet; correct listings · Fixit</span></div>
+          <div class="fix"><span><b>Denser than the "low-density" pitch</b></span><span class="rs a">9</span><span class="ow">Drop the claim; sell four homes a floor · Fixit</span></div>
+          <div class="fix"><span><b>Eldeco's RERA record not published</b></span><span class="rs a">9</span><span class="ow">Publish delivered projects with OC dates · Eldeco</span></div>
+          <div class="fix"><span><b>Older, less commercial sector</b></span><span class="rs a">9</span><span class="ow">Open the retail plaza early · Eldeco</span></div>
+        </div>
+        <div class="call" style="background:var(--surface-2)">One red flag can't be fixed: the price is about 2.5× the sector's 15-year-old resale. Answer it in the room by comparing with Godrej Arden, Sobha Aurum and Godrej Crown, the new launches, never with old Omicron stock.</div>
+      </div>
+      <p class="src">Risk scores (severity × likelihood, out of 25) from the workbook, Sheet 15. Calendar: Dhanteras 6 Nov and Diwali 8 Nov 2026; NCR wedding season Nov–Jan; Sustenance phase from 28 Jan 2027 (workbook 01B); trade fairs at India Expo Mart Feb–Mar; financial year-end 31 Mar.</p>
+    </div>
+
+    <!-- 6 BUDGET -->
+    <div class="panel" role="tabpanel" id="p-budget" data-tab="budget" data-name="Budget" hidden>
+      <div class="sec">
+        <span class="tag d">E · Budget</span>
+        <h2>₹30 L over two quarters, held to 0.6–0.95% of every home it sells.</h2>
+        <div class="g4">
+          <div class="tile"><div class="v">₹12 L</div><p>this quarter, 15 Oct – 31 Dec (11 weeks)</p></div>
+          <div class="tile"><div class="v">₹18 L</div><p>next quarter, Jan – Mar 2027, Sustenance and the Gulf</p></div>
+          <div class="tile ok"><div class="v">₹1.6–2.5 L</div><p>the allowed spend per booking: 0.6–0.95% of a ₹2.65 Cr average home</p></div>
+          <div class="tile"><div class="v" id="b-cpb">₹1.84 L</div><p id="b-cpbp">planned spend per booking, very conservative case (0.70%)</p></div>
+        </div>
+        <div class="card"><h3>Where the plan sits in your 0.6–0.95% rule</h3><p class="cap">Spend ÷ value of homes booked · very conservative case</p><div id="band" style="margin-top:18px"></div></div>
+        <div class="card" style="overflow-x:auto">
+          <table class="bt" id="btable"></table>
+          <div class="lbl" style="margin-top:16px">Split · two quarters</div>
+          <div class="bstack" id="bstack"></div>
+        </div>
+      </div>
+      <div class="sec">
+        <h2>Why the money goes where it goes.</h2>
+        <div class="g3">
+          <div class="card" style="border-top:3px solid var(--good)"><h3>Partners are the cheapest site visit</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">Channel-partner drives and investor evenings take 35% of the budget. ANAROCK finds the top 5% of partners bring 40–50% of bookings, so the money follows the few who close.</p></div>
+          <div class="card" style="border-top:3px solid var(--blue)"><h3>Digital stays targeted</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">Meta in NCR-East and Western UP, plus Google on "3 BHK Greater Noida" and the brand. No broad "luxury" audiences.</p></div>
+          <div class="card" style="border-top:3px solid var(--senior)"><h3>The Gulf waits for January</h3><p class="cap" style="font-size:13.5px;color:var(--ink-2)">The workbook holds NRIs to referrals until Sustenance. ₹1.25 L tests the UAE in January–March, then scales on cost per visit.</p></div>
+        </div>
+      </div>
+      <p class="src">Budget rule set by the promoter: marketing spend of 0.6–0.95% of each home's value. Average home ₹2.65 Cr, weighted 3 and 4 BHK at ₹13,000 BSP. Budget excludes channel-partner brokerage and Fixit's fee, and is reallocated weekly inside the approved total on cost per site visit. For context, ANAROCK says major brands keep total acquisition cost, brokerage included, at 2.5–2.8% of sales (May 2026).</p>
+    </div>
+
+    <!-- 7 FUNNEL -->
+    <div class="panel" role="tabpanel" id="p-funnel" data-tab="funnel" data-name="Funnel & forecast" hidden>
+      <div class="sec">
+        <span class="tag d">F · Funnel and forecast</span>
+        <h2>What the money turns into, quarter by quarter.</h2>
+        <div class="ctrl">
+          <div class="seg-btn" role="group" aria-label="Scenario"><button type="button" data-sc="conservative" aria-pressed="true">Very conservative</button><button type="button" data-sc="base" aria-pressed="false">Base</button></div>
+          <div class="seg-btn" role="group" aria-label="Quarter"><button type="button" data-q="0" aria-pressed="true">This quarter · Oct–Dec</button><button type="button" data-q="1" aria-pressed="false">Next quarter · Jan–Mar</button></div>
+        </div>
+        <div class="res" id="res"></div>
+        <div class="g2" style="grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)">
+          <div class="card"><h3>The funnel</h3><p class="cap" id="fcap"></p><div class="funnel" id="funnel" style="margin-top:12px"></div></div>
+          <div class="card"><h3>Bookings by March 2027</h3><p class="cap">Each square is one booking this plan delivers, in this scenario</p><div class="units" id="units"></div>
+            <div class="legend" style="margin-top:12px"><span><i style="background:var(--good)"></i>Oct–Dec</span><span><i style="background:var(--blue)"></i>Jan–Mar</span><span><i style="background:var(--track)"></i>Still in the pipeline</span></div>
+            <p class="cap" id="ucap" style="margin-top:10px"></p></div>
+        </div>
+        <div class="card" style="overflow-x:auto"><h3>By channel</h3><table class="bt" id="ctable" style="margin-top:10px"></table></div>
+      </div>
+      <div class="sec">
+        <h2>The assumptions, and where they come from.</h2>
+        <div class="card" style="overflow-x:auto">
+          <table class="bt bench"><thead><tr><th>Assumption</th><th class="n">Very conservative</th><th class="n">Base</th><th>Market range</th></tr></thead><tbody id="atable"></tbody></table>
+        </div>
+        <div class="call" style="background:var(--surface-2)">Very conservative means cost per lead above the NCR range, site-visit and booking rates below the bottom of the market ranges, and only 65% of a quarter's bookings landing in that quarter. It also allows for a slower market: Noida and Greater Noida sales fell 20% in Apr–Jun 2026, Godrej's NCR projects outside Gurugram booked at most ~₹290 Cr between them that quarter, and site-visit no-shows run 30–45%. These are bookings sourced by this plan; channel-partner sales outside it come on top. The budget is sized so even this case stays inside 0.6–0.95% of the homes it sells.</div>
+      </div>
+      <p class="src">Benchmarks: NCR Meta cost per lead ₹350–1,200 (luxury ₹800–2,500) and Google ₹1,200–3,500 (Aarmus 2026; Leadproio Jul 2026); lead to site visit 8–15% and site visit to booking 10–25% (Upgrowth; Realatic Apr 2026); ₹2–3 Cr homes ~15 days from lead to purchase (ANAROCK, Feb 2026). No-shows 30–45% (ANAROCK, May 2026). Godrej NCR ex-Samaris ≤ ₹290 Cr derived from Q1 FY27 results. Directional; replaced with Eldeco's CRM data in week 2.</p>
+    </div>
+  </section>
+</div>
+
+<script>
+(function(){
+  const $=s=>document.querySelector(s), css=v=>`var(--${v})`;
+  const AVG=2.65, LO=.006, HI=.0095;
+
+  const panels=[...document.querySelectorAll('.panel')], tl=$('#tablist');
+  panels.forEach((p,i)=>{const b=document.createElement('button');b.className='tab';b.type='button';b.setAttribute('role','tab');b.id='t-'+p.dataset.tab;b.setAttribute('aria-controls',p.id);b.dataset.tab=p.dataset.tab;b.innerHTML=`<span class="n">0${i+1}</span>${p.dataset.name}`;b.addEventListener('click',()=>show(p.dataset.tab,true));tl.appendChild(b);});
+  tl.addEventListener('keydown',e=>{if(!['ArrowRight','ArrowLeft'].includes(e.key))return;const t=[...tl.children],i=t.findIndex(x=>x.getAttribute('aria-selected')==='true');const n=t[(i+(e.key==='ArrowRight'?1:-1)+t.length)%t.length];n.focus();show(n.dataset.tab,true);});
+  const placers=[];
+  function show(id,scroll){panels.forEach(p=>p.hidden=p.dataset.tab!==id);[...tl.children].forEach(t=>{const on=t.dataset.tab===id;t.setAttribute('aria-selected',on);t.tabIndex=on?0:-1;if(on&&scroll)t.scrollIntoView({block:'nearest',inline:'center'});});try{history.replaceState(null,'','#'+id)}catch(e){}requestAnimationFrame(()=>placers.forEach(f=>f()));if(scroll){const top=$('#dash').getBoundingClientRect().top+window.scrollY;if(window.scrollY>top)window.scrollTo({top});}}
+
+  const J=[['market','Market','Greater Noida doubled in five years and the airport is flying. 7 Peaks is priced near ready stock, below the launch median.','var(--good)'],['compete','Competitors','Godrej Arden sold ₹1,529 Cr at 7 Peaks\' rate. Brokers sell 7 Peaks with the wrong facts.','var(--bad)'],['buyers','Buyers','Investors first, then upgraders, doctors and Kasna owners. Brand weighs most for five of six families.','#9A6B12'],['plan','Plan of action','One voice in October, investors and upgraders by Diwali, the Gulf from January.','var(--blue)'],['budget','Budget','₹30 L over two quarters, inside 0.6–0.95% of every home sold.','var(--senior)'],['funnel','Funnel & forecast','Very conservative: ~5 this quarter, ~11 next. Switch to base, or to either quarter.','var(--ink)']];
+  $('#jumps').innerHTML=J.map(([id,t,p,c])=>`<button class="jump" type="button" data-go="${id}" style="--jc:${c}"><span class="t">${t}<span>Open →</span></span><p>${p}</p></button>`).join('');
+  document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.go,true)));
+
+  const S=[['eldeco green meadows',12100,'blue'],['3 bhk flats in greater noida',1000,'good'],['3bhk in greater noida',1000,'good'],['3 bhk greater noida',880,'good'],['eldeco noida',480,'blue'],['eldeco greater noida',390,'blue'],['eldeco 7 peaks',0,''],['godrej arden',0,''],['sobha aurum',0,'']];
+  $('#b-search').innerHTML=S.map(([k,v,c])=>v?`<div class="br"><span>${k}</span><div class="tr"><i style="width:${Math.max(v/12100*100,3)}%;background:${css(c)}"></i></div><span class="val">${v.toLocaleString('en-IN')}</span></div>`:`<div class="br zero"><span><b>${k}</b></span><div class="tr"></div><span class="val">—</span></div>`).join('');
+
+  function ladder(el,dom,groups,mark,step,markAt){
+    const [lo,hi]=dom,pct=v=>(v-lo)/(hi-lo)*100;let h='';
+    groups.forEach(g=>{h+=`<div class="lrow"><div class="g"><b>${g[0]}</b><span>${g[1]}</span></div><div class="lt">`;g[2].forEach(([name,a,b,col])=>{const L=pct(a),W=b?pct(b)-pct(a):0,lab=b?`₹${a.toFixed(1)}–${b.toFixed(1)}k`:`₹${a.toFixed(1)}k`;const tx=(b?pct(b):pct(a))+1.4,right=tx>66;h+=`<div class="it">${b?`<span class="m" style="left:${L}%;width:${W}%;background:${css(col)}"></span>`:`<span class="m dot" style="left:${L}%;background:${css(col)}"></span>`}<span class="t" style="${right?`right:${100-(L-1.4)}%`:`left:${tx}%`}"><b>${name}</b> ${lab}</span></div>`;});h+=`</div></div>`;});
+    const ticks=[];for(let v=lo;v<=hi+.01;v+=step)ticks.push(v);
+    h+=`<div class="axisx"><div></div><div class="ticks">${ticks.map((v,k)=>`<span style="left:${pct(v)}%;${k===ticks.length-1?'transform:translateX(-100%)':''}">₹${Math.round(v)}k</span>`).join('')}</div></div>`;
+    el.innerHTML=`<div class="ladder">${h}</div>`;
+    const lad=el.querySelector('.ladder'),lt=el.querySelector('.lt'),line=document.createElement('div');line.className='e361';line.innerHTML=`<span>${mark}</span>`;lad.appendChild(line);
+    const place=()=>{const L=lt.getBoundingClientRect(),P=lad.getBoundingClientRect();if(!L.width)return;line.style.left=(L.left-P.left+L.width*pct(markAt)/100)+'px';const rows=lad.querySelectorAll('.lrow');line.style.bottom=(P.bottom-rows[rows.length-1].getBoundingClientRect().bottom)+'px';};
+    place();window.addEventListener('resize',place);return place;
+  }
+  placers.push(ladder($('#ladder'),[4,18],[
+    ['Sector averages','Omicron and neighbours',[['Omicron 1A',5.0,0,'grey'],['Omicron I',8.8,0,'grey'],['Omicron 2',9.1,0,'grey'],['Mu 1',9.4,0,'grey']]],
+    ['Ready apartments','What owners resell for',[['Eldeco Green Meadows',4.5,0,'good'],['Godrej Golf Links apts',9.5,9.7,'good'],['ATS Dolce (newest delivered)',10.4,14.0,'good']]],
+    ['Similar launches','Branded, ~10 km, within a year',[['Godrej Arden (launch list → sold)',11.8,13.0,'senior'],['Sobha Aurum, Sec 36',15.0,0,'senior'],['Godrej Crown, Sec 27',16.1,0,'senior']]],
+  ],'7 Peaks BSP ₹13,000',2,13));
+
+  const SEG=[
+    ['Long-hold landlords, NCR-East','Noida, Greater Noida, GN West, Ghaziabad professionals · rent offsets carry','Channel partners, LinkedIn, hospital networks','Rent comps and the thin-yield maths; sell a hold','blue','Investor'],
+    ['NCR appreciation investors','Repeat buyers in Noida 50–150, GN, Indirapuram','CP investor desks, Meta look-alikes, investor evenings','The dated ATS Dolce census and 30:40:30 maths','blue','Investor'],
+    ['Western-UP business investors','Meerut, Bulandshahr, Aligarh, Agra · land-to-apartment switch','CP networks, trade bodies, Hindi print, site-visit coaches','Investor evenings in Meerut and Agra','blue','Investor'],
+    ['Delhi HNI and business families','South & West Delhi · portfolio allocation','Private-bank RMs, wealth managers, CA networks','RM-led investor dinners','blue','Investor'],
+    ['Doctors','Fortis, Sharda, Yatharth, Kailash · ₹46 L–1.2 Cr incomes','IMA Greater Noida, hospital CMEs','Drive-time test from each hospital gate','good','End user'],
+    ['Omicron, Pi, Chi, Zeta upgraders','Owners in ageing towers, 10 flats a floor','Hoardings on the 130 m road, society digital','Lead with light and design, never space','good','End user'],
+    ['Kasna and Ecotech business owners','Plant owners and GMs · ₹40 L–3 Cr','Industrial associations, Expo Mart','Type B and C; the staff-room story','good','End user'],
+    ['Greater Noida West upgraders','Gaur City, Sector 1 and 16 · crowded towers','Geo-targeted digital','"Four homes a floor" against 300-flat towers','good','End user'],
+    ['Gulf NRIs with family in NCR','UAE first, then Saudi, Qatar · referral route now','Family referrals now; Dubai campaign from Jan 2027','WhatsApp walkthroughs for the family in NCR','senior','From Jan'],
+  ];
+  $('#segs').innerHTML=SEG.map(([w,s,ch,f,c,t],i)=>`<div class="seg"><span class="rk" style="background:${css(c)}">${i+1}</span><div><b>${w}</b><span class="sz">${s}</span><br><span class="tagx" style="background:${c==='good'?'var(--good-soft)':c==='blue'?'var(--blue-soft)':'var(--senior-soft)'};color:${css(c)}">${t}</span></div><div>${ch}</div><div>${f}</div></div>`).join('');
+
+  const F=[['The Fortis couple','Live now','Doctors at Fortis/Sharda, renting in Omicron I','Type A/B','Why pay ₹13,000 here?',[2,2,1,0,1,0],'p1'],['The Kasna upgrader','Live now','Factory owner, owns a 3 BHK in Pi/Zeta','Type B','Is every tower registered?',[0,1,2,1,2,0],'p3'],['The joint family','Live now','Business family in a Gamma/Delta plot house','Type C','Can we wait until 2030?',[0,1,1,0,2,2],'p4'],['The NCR appreciation investor','Live now','Noida/Ghaziabad professional; holds and lets','Type A','Will it beat ATS Dolce at handover?',[0,0,2,1,2,1],'p2'],['The Delhi portfolio investor','Live now','South/West Delhi business family','Type B/C','How liquid is it at possession?',[0,0,2,1,2,1],'p5'],['The Western-UP business investor','Live now','Meerut/Aligarh trader family, business cash','Type B/C','Is it safer than a YEIDA plot?',[0,0,2,1,2,1],'p6']];
+  $('#mx').innerHTML=`<thead><tr><th>Who they are</th><th>First doubt</th>${['Commute','Schools','Price','Plan','Brand','Timing'].map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>`+F.map((f,i)=>`<tr><td><div class="fam"><span class="ic" style="background:${css(f[6])}">${i+1}</span><div><b>${f[0]}</b><span class="pill">${f[1]}</span><small>${f[2]} · <em>${f[3]}</em></small></div></div></td><td class="doubt">? ${f[4]}</td>${f[5].map(w=>`<td><span class="wd w${w}"></span></td>`).join('')}</tr>`).join('')+`</tbody>`;
+  const P=[[[1],'Long drives home after night shifts','Fortis ~10 min, Sharda ~20 min','drive times estimated'],[[1,2],'Dark, crowded older flats','Light on three sides (Type B), four homes a floor','older flats hold more carpet'],[[2],'Fear of another stalled project','UP-RERA registered; delivered Eldeco homes in Pi 1','portal count still to match 820'],[[3],'No room for live-in help','4 BHK staff room + WC, puja and store','three baths for four bedrooms'],[[3,5],'Will the airport matter to us?','Noida International Airport flying since Jun 2026','international flights not yet operating'],[[4],'Will a tenant really pay?','1,200 hospital beds and 11,000 students nearby','rent offsets part of the EMI, not all'],[[1,2,3],'Surprise charges at allotment','Same carpet rate in every type','power backup, PLC, kitchen extra']];
+  $('#pains').innerHTML=`<div class="lbl" style="display:flex;justify-content:space-between;margin-bottom:6px"><span>Pain today → the strength that answers it</span><span>Honest limit</span></div>`+P.map(([n,p,s,l])=>`<div class="ps" style="grid-template-columns:62px minmax(0,1fr) minmax(0,1fr)"><div class="nums">${n.map(k=>`<i style="background:${css('p'+k)}">${k}</i>`).join('')}</div><div class="pain">${p}</div><div class="str">✓ ${s}<div style="font-weight:400;font-size:12px;color:var(--muted);margin-top:3px">⚠ ${l}</div></div></div>`).join('');
+
+  /* ---------- budget + funnel model ---------- */
+  const CH=[
+    {n:'Meta · NCR-East',d:'Noida, Greater Noida, GN West, Ghaziabad, East Delhi · investors and upgraders',col:'good',b:[3.5,5.0],t:'paid',p:'meta'},
+    {n:'Google Search',d:'"3 BHK Greater Noida", Eldeco brand defence, new-launch searches',col:'blue',b:[1.5,2.0],t:'paid',p:'google'},
+    {n:'Meta · Western UP',d:'Meerut, Bulandshahr, Aligarh, Agra · Hindi creative',col:'cyan',b:[0.75,1.25],t:'paid',p:'wup'},
+    {n:'NRI · Gulf (from Jan)',d:'UAE first; family-in-NCR site visits',col:'p5',b:[0,1.25],t:'paid',p:'nri'},
+    {n:'Channel-partner activation',d:'CP meets, site-visit cabs, co-op ads (brokerage paid separately)',col:'senior',b:[3.0,4.0],t:'cpv'},
+    {n:'Investor evenings',d:'Meerut, Agra, Delhi wealth-manager dinners, site-visit coaches',col:'p6',b:[1.5,2.0],t:'att'},
+    {n:'Hoardings, societies, doctors',d:'130 m road, Omicron/Pi/Zeta/Chi societies, IMA and hospital CMEs',col:'grey',b:[1.0,1.25],t:'loc'},
+    {n:'Content, CRM & referrals',d:'Cost sheet, slab video reports, UP-RERA explainer, WhatsApp CRM, buyer referrals',col:'p2',b:[0.75,1.25],t:'fix'},
+  ];
+  const SC={
+    conservative:{cpl:{meta:1500,google:2400,wup:1000,nri:4500},lq:{meta:.18,google:.25,wup:.12,nri:.15},qv:{meta:.30,google:.35,wup:.25,nri:.20},vbP:[.08,.09],vbW:[.06,.07],cpv:5000,vbC:[.09,.10],cpa:7000,av:.35,vbE:[.10,.11],cpll:3000,lql:.40,qvl:.45,vbL:[.08,.09],close:[.65,.65]},
+    base:{cpl:{meta:1500,google:2400,wup:1000,nri:4500},lq:{meta:.18,google:.25,wup:.12,nri:.15},qv:{meta:.30,google:.35,wup:.25,nri:.20},vbP:[.11,.12],vbW:[.09,.10],cpv:5000,vbC:[.13,.14],cpa:7000,av:.35,vbE:[.14,.15],cpll:3000,lql:.40,qvl:.45,vbL:[.11,.12],close:[.70,.75]},
+  };
+  const colOf=c=>css(c);
+  function run(sn){
+    const s=SC[sn];let carry=0;const out=[];
+    [0,1].forEach(q=>{
+      const rows=CH.map(c=>{const sp=c.b[q];let l=0,ql=0,v=0,b=0;
+        if(c.t==='paid'&&sp){l=sp*1e5/s.cpl[c.p];ql=l*s.lq[c.p];v=ql*s.qv[c.p];b=v*(c.p==='wup'?s.vbW[q]:s.vbP[q]);}
+        else if(c.t==='cpv'){v=sp*1e5/s.cpv;l=v/.30;ql=v/.6;b=v*s.vbC[q];}
+        else if(c.t==='att'){l=sp*1e5/s.cpa;ql=l*.6;v=l*s.av;b=v*s.vbE[q];}
+        else if(c.t==='loc'){l=sp*1e5/s.cpll;ql=l*s.lql;v=ql*s.qvl;b=v*s.vbL[q];}
+        return {c,spend:sp,l,ql,v,b};});
+      const T=rows.reduce((a,r)=>({spend:a.spend+r.spend,l:a.l+r.l,ql:a.ql+r.ql,v:a.v+r.v,b:a.b+r.b}),{spend:0,l:0,ql:0,v:0,b:0});
+      const closed=T.b*s.close[q]+carry; carry=T.b*(1-s.close[q]);
+      out.push({rows,T,closed,carryOut:carry});
+    });
+    return out;
+  }
+  const pctOf=(spend,bk)=>spend*1e5/(bk*AVG*1e7)*100;
+  (function(){
+    const t1=CH.reduce((a,c)=>a+c.b[0],0),t2=CH.reduce((a,c)=>a+c.b[1],0);
+    $('#btable').innerHTML=`<thead><tr><th>Channel</th><th class="n">Oct–Dec</th><th class="n">Jan–Mar</th><th class="n">Total</th><th class="n">Share</th></tr></thead><tbody>`+
+      CH.map(c=>`<tr><td><span class="sw" style="background:${colOf(c.col)}"></span><b>${c.n}</b><small>${c.d}</small></td><td class="n">₹${c.b[0]} L</td><td class="n">₹${c.b[1]} L</td><td class="n">₹${c.b[0]+c.b[1]} L</td><td class="n">${Math.round((c.b[0]+c.b[1])/(t1+t2)*100)}%</td></tr>`).join('')+
+      `<tr class="tot"><td>Total</td><td class="n">₹${t1} L</td><td class="n">₹${t2} L</td><td class="n">₹${t1+t2} L</td><td class="n">100%</td></tr></tbody>`;
+    $('#bstack').innerHTML=CH.map(c=>{const p=(c.b[0]+c.b[1])/(t1+t2)*100;return `<div style="flex:0 0 calc(${p}% - 2px);background:${colOf(c.col)}" title="${c.n}">${p>=9?Math.round(p)+'%':''}</div>`}).join('');
+    const R=run('conservative'); const pts=[['Oct–Dec',pctOf(R[0].T.spend,R[0].closed),'good'],['Jan–Mar',pctOf(R[1].T.spend,R[1].closed),'blue'],['Two quarters',pctOf(R[0].T.spend+R[1].T.spend,R[0].closed+R[1].closed),'ink']];
+    const lo=.4,hi=1.1,P=v=>(v-lo)/(hi-lo)*100;
+    $('#band').innerHTML=`<div style="position:relative;height:96px">
+      <div style="position:absolute;left:0;right:0;top:30px;height:14px;border-radius:7px;background:var(--track)"></div>
+      <div style="position:absolute;left:${P(.6)}%;width:${P(.95)-P(.6)}%;top:30px;height:14px;border-radius:7px;background:var(--good-soft);box-shadow:inset 0 0 0 1.5px var(--good)"></div>
+      <span style="position:absolute;left:${P(.6)}%;top:78px;transform:translateX(-50%);font-family:var(--mono);font-size:11px;color:var(--good)">0.60%</span>
+      <span style="position:absolute;left:${P(.95)}%;top:78px;transform:translateX(-50%);font-family:var(--mono);font-size:11px;color:var(--good)">0.95%</span>
+      ${pts.map(([n,v,c],i)=>`<span style="position:absolute;left:${P(v)}%;top:${i===2?26:24}px;width:${i===2?22:18}px;height:${i===2?22:18}px;transform:translateX(-50%);border-radius:50%;background:${css(c)};border:3px solid var(--surface)"></span><span style="position:absolute;left:${P(v)}%;top:${i===2?54:0}px;transform:translateX(${i===0?'-12%':i===1?'-88%':'-50%'});font-size:12px;font-weight:600;white-space:nowrap;color:var(--ink)">${n} ${v.toFixed(2)}%</span>`).join('')}
+    </div>`;
+  })();
+  const A=[['Meta cost per lead · NCR-East','₹1,500','₹1,500','₹350–1,200 NCR; ₹800–2,500 luxury'],['Google cost per lead','₹2,400','₹2,400','₹1,200–3,500 NCR'],['Meta cost per lead · Western UP / Gulf','₹1,000 / ₹4,500','₹1,000 / ₹4,500','Gulf ₹3,300–13,200 (to test)'],['Lead → qualified → site visit (Meta)','18% → 30%','18% → 30%','lead → visit 8–15%'],['Site visit → booking, digital (Oct–Dec / Jan–Mar)','8% / 9%','11% / 12%','10–25%'],['Partner site visit → booking','9% / 10%','13% / 14%','15–25%'],['Cost per partner-driven site visit','₹5,000','₹5,000','cabs, CP meets, co-op ads'],['Bookings closing in the same quarter','65%','70% / 75%','₹2–3 Cr: ~15 days lead to purchase'],['Average home','₹2.65 Cr','₹2.65 Cr','3 & 4 BHK at ₹13,000 BSP']];
+  $('#atable').innerHTML=A.map(r=>`<tr><td>${r[0]}</td><td class="n">${r[1]}</td><td class="n">${r[2]}</td><td style="color:var(--muted)">${r[3]}</td></tr>`).join('');
+
+  let SCN='conservative',QI=0;
+  const fmt=x=>Math.round(x).toLocaleString('en-IN');
+  function render(){
+    const R=run(SCN),q=R[QI],T=q.T;
+    const spend=R[0].T.spend+R[1].T.spend, two=R[0].closed+R[1].closed;
+    $('#res').innerHTML=[
+      ['Spend',`₹${T.spend} L`,QI?'Jan–Mar 2027':'15 Oct – 31 Dec'],
+      ['Site visits',fmt(T.v),`from ${fmt(T.l)} enquiries`],
+      ['Bookings closed',`${Math.round(q.closed)}`,`≈ ₹${Math.round(q.closed*AVG)} Cr${QI?' incl. carry-over':''}`],
+      ['Spend per home sold',`${pctOf(T.spend,q.closed).toFixed(2)}%`,`₹${(T.spend/q.closed).toFixed(2)} L a booking · ${pctOf(T.spend,q.closed)<.6?'below the 0.6% floor':'inside 0.6–0.95%'}`],
+    ].map(([k,v,s],i)=>`<div class="fc" style="border-top-color:${['var(--senior)','var(--blue)','var(--good)','var(--ink)'][i]}"><div class="q">${k}</div><div class="v">${v}</div><p>${s}</p></div>`).join('');
+    const st=[['Enquiries','all channels',T.l,'#18181B'],['Qualified','reachable, budget fits, wants 3/4 BHK',T.ql,'#2563EB'],['Site visits','incl. partner-driven visits',T.v,'#B8730A'],['Bookings','generated this quarter',T.b,'#0F8A64']];
+    $('#funnel').innerHTML=st.map(([n,s,v,c],i)=>`<div class="fs"><div class="lb">${n}<small>${s}</small></div><div><div class="bx" style="width:${Math.max(v/T.l*100,7)}%;background:${c}">${v<10?v.toFixed(1):fmt(v)}</div></div><div class="rt">${i?(v/st[i-1][2]*100).toFixed(0)+'% of above':''}</div></div>`).join('');
+    $('#fcap').textContent=`${SCN==='conservative'?'Very conservative':'Base'} case · ${QI?'next quarter, Jan–Mar 2027':'this quarter, 15 Oct – 31 Dec'} · ${q.closed.toFixed(1)} close in-quarter${QI?' (incl. carry-over)':''}, ${q.carryOut.toFixed(1)} carry forward`;
+    const b1=Math.round(R[0].closed),b2=Math.round(R[1].closed),cr=Math.round(R[1].carryOut);
+    $('#units').innerHTML=Array.from({length:b1+b2+cr},(_,i)=>`<i style="width:22px;height:22px;background:${i<b1?css('good'):i<b1+b2?css('blue'):css('track')}"></i>`).join('');
+    $('#ucap').textContent=`${b1} + ${b2} = ${b1+b2} bookings by March 2027 (≈ ₹${Math.round(two*AVG)} Cr) on ₹${spend} L, with ~${cr} more in the pipeline. Spend: ${pctOf(spend,two).toFixed(2)}% of homes sold.`;
+    $('#ctable').innerHTML=`<thead><tr><th>Channel</th><th class="n">Spend</th><th class="n">Enquiries</th><th class="n">Site visits</th><th class="n">Bookings</th><th class="n">Cost / visit</th></tr></thead><tbody>`+
+      q.rows.filter(r=>r.l>0).map(r=>`<tr><td><span class="sw" style="background:${colOf(r.c.col)}"></span>${r.c.n}</td><td class="n">₹${r.spend} L</td><td class="n">${fmt(r.l)}</td><td class="n">${r.v.toFixed(0)}</td><td class="n">${r.b.toFixed(1)}</td><td class="n">₹${fmt(r.spend*1e5/r.v)}</td></tr>`).join('')+
+      `<tr class="tot"><td>Total (incl. content & CRM)</td><td class="n">₹${T.spend} L</td><td class="n">${fmt(T.l)}</td><td class="n">${T.v.toFixed(0)}</td><td class="n">${T.b.toFixed(1)}</td><td class="n">₹${fmt(T.spend*1e5/T.v)}</td></tr></tbody>`;
+    if(SCN==='conservative'){ $('#s-q3').innerHTML=`${b1} <small>bookings</small>`; $('#s-q3v').textContent=`≈ ₹${Math.round(R[0].closed*AVG)} Cr booked · ${pctOf(R[0].T.spend,R[0].closed).toFixed(2)}% spend`; $('#s-q4').innerHTML=`${b2} <small>bookings</small>`; $('#s-q4v').textContent=`≈ ₹${Math.round(R[1].closed*AVG)} Cr booked · ${pctOf(R[1].T.spend,R[1].closed).toFixed(2)}% spend`; const p=pctOf(spend,two); $('#s-cpb').textContent=`${p.toFixed(2)}%`; $('#s-cpbp').textContent=`~₹${(spend/two).toFixed(2)} L a booking, inside the 0.6–0.95% rule in both quarters`; $('#b-cpb').textContent=`₹${(spend/two).toFixed(2)} L`; $('#b-cpbp').textContent=`planned spend per booking, very conservative case (${p.toFixed(2)}%)`; }
+  }
+  document.querySelectorAll('[data-sc]').forEach(b=>b.addEventListener('click',()=>{SCN=b.dataset.sc;document.querySelectorAll('[data-sc]').forEach(x=>x.setAttribute('aria-pressed',x===b));render();}));
+  document.querySelectorAll('[data-q]').forEach(b=>b.addEventListener('click',()=>{QI=+b.dataset.q;document.querySelectorAll('[data-q]').forEach(x=>x.setAttribute('aria-pressed',x===b));render();}));
+  render();
+
+  const land=$('#landing'),dash=$('#dash'),go=$('#go'),steps=$('#steps');
+  const reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function openDash(tab){land.hidden=true;dash.hidden=false;show(tab||'summary',false);requestAnimationFrame(()=>placers.forEach(f=>f()));window.scrollTo({top:0});}
+  go.addEventListener('click',()=>{go.disabled=true;go.textContent='Analysing 7 Peaks…';steps.hidden=false;const lis=[...steps.children],dt=reduce?120:620;let i=0;const tick=()=>{if(i>0){lis[i-1].className='done';lis[i-1].querySelector('.dot').textContent='✓';}if(i<lis.length){lis[i].className='run';i++;setTimeout(tick,dt);}else setTimeout(()=>openDash('summary'),reduce?60:380);};tick();});
+  $('#restart').addEventListener('click',()=>{dash.hidden=true;land.hidden=false;go.disabled=false;go.innerHTML='Analyse 7 Peaks <span aria-hidden="true">→</span>';steps.hidden=true;[...steps.children].forEach((li,k)=>{li.className='';li.querySelector('.dot').textContent=k+1;});try{history.replaceState(null,'','#')}catch(e){}window.scrollTo({top:0});});
+  const h=(location.hash||'').slice(1); if(panels.some(p=>p.dataset.tab===h)) openDash(h);
+})();
+</script>
+
+</body>
+</html>
